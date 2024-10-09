@@ -87,6 +87,7 @@
         <h1>Buttons</h1>
         <button onclick="Telegram.WebApp.expand();">Expand Webview</button>
         <button onclick="toggleMainButton();">Toggle Main Button</button>
+        <button onclick="openCamera();">Open Camera</button> <!-- New button added -->
     </main>
     <div id="viewport"></div>
     <div id="viewport-params-size"></div>
@@ -152,6 +153,18 @@
         Telegram.WebApp.onEvent('themeChanged', function() {
             document.body.setAttribute('style', '--bg-color:' + Telegram.WebApp.backgroundColor);
         });
+
+        // Function to open the camera
+        function openCamera() {
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function(stream) {
+                    // Handle the stream, e.g., display it in a video element
+                    console.log('Camera opened successfully');
+                })
+                .catch(function(err) {
+                    console.error('Error accessing the camera: ', err);
+                });
+        }
 
     </script>
 
