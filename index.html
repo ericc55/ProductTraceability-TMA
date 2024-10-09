@@ -162,14 +162,16 @@
             const cameraLayer = document.getElementById('camera-layer');
             const video = document.getElementById('camera-stream');
 
-            navigator.mediaDevices.getUserMedia({ video: true })
-                .then(stream => {
-                    video.srcObject = stream;
-                    cameraLayer.style.display = 'flex';
-                })
-                .catch(error => {
-                    console.error('Error accessing the camera', error);
-                });
+            navigator.mediaDevices.getUserMedia({ 
+                video: { facingMode: 'environment' } // This requests the rear camera
+            })
+            .then(stream => {
+                video.srcObject = stream;
+                cameraLayer.style.display = 'flex';
+            })
+            .catch(error => {
+                console.error('Error accessing the camera', error);
+            });
         }
 
         function closeCamera() {
