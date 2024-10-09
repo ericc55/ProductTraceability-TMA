@@ -87,10 +87,15 @@
         <h1>Buttons</h1>
         <button onclick="Telegram.WebApp.expand();">Expand Webview</button>
         <button onclick="toggleMainButton();">Toggle Main Button</button>
+        <button onclick="openCamera();">Open Camera</button>
     </main>
     <div id="viewport"></div>
     <div id="viewport-params-size"></div>
     <div id="viewport-params-expand"></div>
+    <div id="camera-layer" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 1000; align-items: center; justify-content: center; flex-direction: column;">
+        <video id="camera-stream" autoplay style="width: 80%; height: auto;"></video>
+        <button onclick="closeCamera();" style="margin-top: 20px; padding: 10px 20px; font-size: 16px;">Cancel</button>
+    </div>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         // Init TWA
@@ -152,6 +157,32 @@
         Telegram.WebApp.onEvent('themeChanged', function() {
             document.body.setAttribute('style', '--bg-color:' + Telegram.WebApp.backgroundColor);
         });
+
+        function openCamera() {
+            const cameraLayer = document.getElementById('camera-layer');
+            const video = document.getElementById('camera-stream');
+
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(stream => {
+                    video.srcObject = stream;
+                    cameraLayer.style.display = 'flex';
+                })
+                .catch(error => {
+                    console.error('Error accessing the camera', error);
+                });
+        }
+
+        function closeCamera() {
+            const cameraLayer = document.getElementById('camera-layer');
+            const video = document.getElementById('camera-stream');
+
+            const stream = video.srcObject;
+            const tracks = stream.getTracks();
+
+            tracks.forEach(track => track.stop());
+            video.srcObject = null;
+            cameraLayer.style.display = 'none';
+        }
 
     </script>
 
