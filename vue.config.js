@@ -8,6 +8,8 @@ module.exports = defineConfig({
       title: 'TuiSeki ~みんなで食安全を守ろう~',
     },
   },
-  publicPath: process.env.NODE_ENV === "production" ? "/ProductTraceability-TMA/" : "/",
+  publicPath: process.env.NODE_ENV === "production" 
+    ? "/ProductTraceability-TMA/" 
+    : "/",
   
 })
