@@ -1,19 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- <img alt="Vue logo" src="./assets/tapps.png"> -->
+  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  <TelegramWebApp />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import TelegramWebApp from './components/TelegramWebApp.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // HelloWorld
+    TelegramWebApp
   }
 }
 </script>
-
+ 
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
