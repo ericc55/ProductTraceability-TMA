@@ -7,5 +7,7 @@ module.exports = defineConfig({
       // template title tag needs to be <title><%= htmlWebpackPlugin.options.title %></title>
       title: 'TuiSeki ~みんなで食安全を守ろう~',
     },
-  }
+  },
+  publicPath: process.env.NODE_ENV === "production" ? "/ProductTraceability-TMA/" : "/",
+  
 })
