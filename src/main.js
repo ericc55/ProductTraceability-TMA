@@ -1,5 +1,11 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+
+
+createApp(App)
+  .use(router)
+  .mount('#app');
 
 // import "./style.css"
 // import ElementPlus from 'element-plus'
@@ -13,7 +19,3 @@ import App from './App.vue'
 // document.querySelector("#app").innerHTML = `
 //   <button class="enableEthereumButton">Enable Ethereum</button>
 //   <h2>Account: <span class="showAccount"></span></h2>`
-
-
-
-createApp(App).mount('#app')
