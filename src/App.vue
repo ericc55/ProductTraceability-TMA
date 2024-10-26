@@ -1,18 +1,21 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/tapps.png"> -->
   <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  <TelegramWebApp />
+  <!-- <TelegramWebApp /> -->
+  <ConnectMetamask />
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import TelegramWebApp from './components/TelegramWebApp.vue';
+// import TelegramWebApp from './components/TelegramWebApp.vue';
+import ConnectMetamask from './components/ConnectMetamask.vue';
 
 export default {
   name: 'App',
   components: {
     // HelloWorld
-    TelegramWebApp
+    // TelegramWebApp
+    ConnectMetamask
   }
 }
 </script>
