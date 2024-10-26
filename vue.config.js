@@ -5,7 +5,7 @@ module.exports = defineConfig({
     index: {
       entry: 'src/main.js',
       // template title tag needs to be <title><%= htmlWebpackPlugin.options.title %></title>
-      title: 'TuiSeki ~みんなで食安全を守ろう~',
+      title: 'フードチェーン ~みんなで食安全を守ろう~',
     },
   },
   publicPath: process.env.NODE_ENV === "production" 

@@ -2,8 +2,8 @@
     <div class="home-page">
       <h2 class="page-title">リスト作成</h2>
       <div class="button-container">
-        <button class="inbound-button" @click="goToInbound">入庫リスト</button>
-        <button class="outbound-button" @click="goToOutbound">出庫リスト</button>
+        <el-button type="primary" @click="goToInbound">入庫リスト</el-button>
+        <el-button type="danger" @click="goToOutbound">出庫リスト</el-button>
       </div>
     </div>
   </template>
@@ -71,4 +71,3 @@
     opacity: 0.8;
   }
   </style>
-  

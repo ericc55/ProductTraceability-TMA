@@ -27,9 +27,9 @@
           <input type="email" v-model="form.unit_mail" required />
         </div>
         <div class="form-group">
-          <label for="unit_type">身分:</label>
+          <label for="unit_type">サプライチェーン事業者の業種:</label>
           <select v-model="form.unit_type" required>
-            <option value="" disabled>身份を選択してください</option>
+            <option value="" disabled>業種を選択してください</option>
             <option value="生産">生産</option>
             <option value="運輸">運輸</option>
             <option value="セール">セール</option>
@@ -38,13 +38,11 @@
   
         <!-- 按钮区域 -->
         <div class="button-group">
-          <button type="button" class="metamask-button" @click="openMetaMask">
-            MetaMaskをインストール
-          </button>
+          <el-button type="primary" @click="openMetaMask">MetaMaskをインストール</el-button>
           <ConnectMetamask />
           <el-button type="primary">Primary</el-button>
-          <button type="submit" class="submit-button">送信</button>
-          <button @click="goToHelloPage" class="back-button">戻る</button>
+          <el-button type="success" @click="handleSubmit">送信</el-button>
+          <el-button type="danger" @click="goToHelloPage">戻る</el-button>
         </div>
       </form>
     </div>

@@ -5,10 +5,10 @@
         <router-view></router-view> <!-- 渲染子组件 -->
       </div>
       <div class="tab-bar">
-        <button class="home-button" @click="goTo('home')">ホーム</button>
-        <button class="history-button" @click="goTo('history')">My履歴</button>
-        <button class="scan-button" @click="goTo('scan')">スキャン</button>
-        <button class="settings-button" @click="goTo('settings')">設置</button>
+        <el-button type="primary" @click="goTo('home')">ホーム</el-button>
+        <el-button type="success" @click="goTo('history')">My履歴</el-button>
+        <el-button type="warning" @click="goTo('scan')">スキャン</el-button>
+        <el-button type="danger" @click="goTo('settings')">設置</el-button>
       </div>
     </div>
   </template>

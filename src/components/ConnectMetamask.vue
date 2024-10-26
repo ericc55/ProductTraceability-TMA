@@ -1,7 +1,12 @@
 <template>
   <div id="app">
-    <button v-if="!account" @click="enableEthereum" class="enableEthereumButton">Connect to MetaMask</button>
-    <h2 v-if="account">Account: <span class="showAccount">{{ account }}</span></h2>
+    <el-button v-if="!account" @click="enableEthereum" class="enableEthereumButton" type="success">MetaMaskに接続</el-button>
+    <h2 v-if="account">
+      <!-- Account: <span class="showAccount">{{ account }}</span> -->
+      <el-alert type="success" title="ウォレットアドレスの認証：" description="この接続により、サービスがあなたのウォレットアドレスを一意のIDとして識別するための認証が完了しました。" />
+      <el-alert type="info" title="ネットワークの互換性チェック：" description="現在接続しているブロックチェーンネットワーク（例: Ethereum Mainnet）が、このサービスと互換性があると確認されました。" />
+      <el-alert type="warning" title="プライバシー保護：" description="このサービスは、あなたのウォレットアドレスのみを参照しており、プライベートキーやその他の個人情報には一切アクセスしません。" />
+    </h2>
   </div>
 </template>
 
@@ -38,7 +43,7 @@ export default {
           console.error("Error connecting to MetaMask:", error);
         }
       } else {
-        alert("Please install MetaMask!");
+        alert("MetaMaskをインストールしてください!");
       }
     },
   },
@@ -47,10 +52,16 @@ export default {
 
 <style scoped>
 .enableEthereumButton {
-  padding: 10px 20px;
-  background-color: #f0f0f0;
+  width: 100%;
+  padding: 10px;
+  /* background-color: #007bff;  Match the color of the "Primary" button  */
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.enableEthereumButton:hover {
+  /* background-color: #0056b3; Hover color similar to the "Primary" button */
 }
 </style>
