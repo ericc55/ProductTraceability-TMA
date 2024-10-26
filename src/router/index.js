@@ -10,6 +10,7 @@ import SettingsPage from '@/components/SettingsPage.vue';
 
 import InBound from '@/components/InBound.vue';
 import OutBound from '@/components/OutBound.vue';
+import ConnectMetamask from '@/components/ConnectMetamask.vue';
 
 const routes = [
     { path: '/', component: HelloPage },
@@ -22,7 +23,9 @@ const routes = [
         { path: 'home/outbound', name: 'outbound', component: OutBound }, // 出库子组件
     ] },
 
-    { path: '/register', component: RegisterPage },
+    { path: '/register', component: RegisterPage, children: [
+        {path: 'connectmetamask', name: 'connectmetamask', component: ConnectMetamask}
+    ] },
 
   ];
   
