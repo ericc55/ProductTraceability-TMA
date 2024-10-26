@@ -3,32 +3,32 @@
       <h2>新規登録</h2>
       <form @submit.prevent="handleSubmit">
         <div class="form-group">
-          <label for="legalId">法人番号:</label>
-          <input type="text" v-model="form.legalId" required />
+          <label for="unit_id">法人番号:</label>
+          <input type="text" v-model="form.unit_id" required />
         </div>
         <div class="form-group">
-          <label for="companyName">会社名前:</label>
-          <input type="text" v-model="form.companyName" required />
+          <label for="unit_name">会社名前:</label>
+          <input type="text" v-model="form.unit_name" required />
         </div>
         <div class="form-group">
-          <label for="postalCode">郵便番号:</label>
-          <input type="text" v-model="form.postalCode" required />
+          <label for="post_code">郵便番号:</label>
+          <input type="text" v-model="form.post_code" required />
         </div>
         <div class="form-group">
-          <label for="address">会社住所:</label>
-          <input type="text" v-model="form.address" required />
+          <label for="unit_address">会社住所:</label>
+          <input type="text" v-model="form.unit_address" required />
         </div>
         <div class="form-group">
-          <label for="phone">電話番号:</label>
-          <input type="tel" v-model="form.phone" required />
+          <label for="unit_tel">電話番号:</label>
+          <input type="tel" v-model="form.unit_tel" required />
         </div>
         <div class="form-group">
-          <label for="email">メールアドレス:</label>
-          <input type="email" v-model="form.email" required />
+          <label for="unit_mail">メールアドレス:</label>
+          <input type="email" v-model="form.unit_mail" required />
         </div>
         <div class="form-group">
-          <label for="identity">身分:</label>
-          <select v-model="form.identity" required>
+          <label for="unit_type">身分:</label>
+          <select v-model="form.unit_type" required>
             <option value="" disabled>身份を選択してください</option>
             <option value="生産">生産</option>
             <option value="運輸">運輸</option>
@@ -79,13 +79,13 @@
       },
       resetForm() {
         this.form = {
-          legalId: '',
-          companyName: '',
-          postalCode: '',
-          address: '',
-          phone: '',
-          email: '',
-          identity: '',
+          unit_id: '',
+          unit_name: '',
+          post_code: '',
+          unit_address: '',
+          unit_tel: '',
+          unit_mail: '',
+          unit_type: '',
         };
       },
       openMetaMask() {
