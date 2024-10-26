@@ -42,6 +42,7 @@
             MetaMaskをインストール
           </button>
           <ConnectMetamask />
+          <el-button type="primary">Primary</el-button>
           <button type="submit" class="submit-button">送信</button>
           <button @click="goToHelloPage" class="back-button">戻る</button>
         </div>
