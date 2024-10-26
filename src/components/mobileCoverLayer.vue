@@ -12,8 +12,9 @@
 export default {
   methods: {
     connectToMetaMask() {
-      const walletConnectUri = 'google.com';
-      window.location.href = `metamask://wc?uri=${walletConnectUri}`;
+      const helloPageUrl = encodeURIComponent(window.location.origin + '/'); // Assuming HelloPage is at the root
+      const metamaskAppDeepLink = `https://metamask.app.link/dapp/${helloPageUrl}`;
+      window.location.href = metamaskAppDeepLink;
     },
     closeLayer() {
       this.$router.push('/');

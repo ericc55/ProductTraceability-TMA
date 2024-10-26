@@ -12,6 +12,8 @@
 
 <script>
 import detectEthereumProvider from "@metamask/detect-provider";
+// import WalletConnect from "@walletconnect/client";
+// import QRCodeModal from "@walletconnect/qrcode-modal";
 
 export default {
   data() {
@@ -65,3 +67,4 @@ export default {
   /* background-color: #0056b3; Hover color similar to the "Primary" button */
 }
 </style>
+
