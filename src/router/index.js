@@ -11,9 +11,11 @@ import SettingsPage from '@/components/SettingsPage.vue';
 import InBound from '@/components/InBound.vue';
 import OutBound from '@/components/OutBound.vue';
 import ConnectMetamask from '@/components/ConnectMetamask.vue';
+import mobileCoverLayer from '@/components/mobileCoverLayer.vue';
 
 const routes = [
     { path: '/', component: HelloPage },
+    { path: '/mobile-cover-layer', component: mobileCoverLayer },
     { path: '/login', component: LoginPage, children: [
         { path: 'home', name: 'home', component: HomePage },
         { path: 'history', name: 'history', component: HistoryPage },

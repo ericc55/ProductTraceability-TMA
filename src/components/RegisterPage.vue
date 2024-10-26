@@ -38,7 +38,7 @@
   
         <!-- 按钮区域 -->
         <div class="button-group">
-          <el-button type="primary" @click="openMetaMask">MetaMaskをインストール</el-button>
+          <!-- <el-button type="primary" @click="openMetaMask">MetaMaskをインストール</el-button> -->
           <ConnectMetamask />
           <el-button type="primary">Primary</el-button>
           <el-button type="success" @click="handleSubmit">送信</el-button>
