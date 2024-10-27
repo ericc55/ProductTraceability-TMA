@@ -29,7 +29,7 @@ const routes = [
     { path: '/register', component: RegisterPage, children: [
         {path: 'connectmetamask', name: 'connectmetamask', component: ConnectMetamask }
     ] },
-    { path: '/nonuser', component: NonUserScan }
+    { path: '/nonuser/ahyf3i53ogot7awer4tlgu7uayfg0fuayfgou', component: NonUserScan }
 
   ];
   

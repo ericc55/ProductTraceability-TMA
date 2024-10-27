@@ -7,7 +7,7 @@
           <input type="text" v-model="form.unit_id" required />
         </div>
         <div class="form-group">
-          <label for="unit_name">会社名前:</label>
+          <label for="unit_name">会社名:</label>
           <input type="text" v-model="form.unit_name" required />
         </div>
         <div class="form-group">
