@@ -1,12 +1,18 @@
 <template>
   <div class="settings-page">
     <h2 class="page-title">情報について</h2>
+    <el-button type="danger" @click="goToHelloPage">ログアウト</el-button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'SettingsPage',
+  methods: {
+    goToHelloPage() {
+      this.$router.push('/'); // 跳转到 HelloPage
+    }
+  }
 };
 </script>
 

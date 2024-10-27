@@ -12,6 +12,7 @@ import InBound from '@/components/InBound.vue';
 import OutBound from '@/components/OutBound.vue';
 import ConnectMetamask from '@/components/ConnectMetamask.vue';
 import mobileCoverLayer from '@/components/mobileCoverLayer.vue';
+import NonUserScan from '@/components/NonUserScan.vue';
 
 const routes = [
     { path: '/', component: HelloPage },
@@ -26,8 +27,9 @@ const routes = [
     ] },
 
     { path: '/register', component: RegisterPage, children: [
-        {path: 'connectmetamask', name: 'connectmetamask', component: ConnectMetamask}
+        {path: 'connectmetamask', name: 'connectmetamask', component: ConnectMetamask }
     ] },
+    { path: '/nonuser', component: NonUserScan }
 
   ];
   

@@ -40,7 +40,6 @@
         <div class="button-group">
           <!-- <el-button type="primary" @click="openMetaMask">MetaMaskをインストール</el-button> -->
           <ConnectMetamask />
-          <el-button type="primary">Primary</el-button>
           <el-button type="success" @click="handleSubmit">送信</el-button>
           <el-button type="danger" @click="goToHelloPage">戻る</el-button>
         </div>
@@ -57,13 +56,13 @@
     data() {
       return {
         form: {
-          legalId: '',
-          companyName: '',
-          postalCode: '',
-          address: '',
-          phone: '',
-          email: '',
-          identity: '',
+          unit_id: '',
+          unit_name: '',
+          post_code: '',
+          unit_address: '',
+          unit_tel: '',
+          unit_mail: '',
+          unit_type: '',
         },
       };
     },
