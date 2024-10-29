@@ -1,6 +1,13 @@
-# TMA
+# Vue.js Project
 
-## Project setup
+## Overview
+A modern Vue.js application built with Vue 3 and the Composition API.
+
+## Prerequisites
+- Node.js (v16.0.0 or higher)
+- npm or yarn
+
+## Installation
 ```
 npm install
 ```
